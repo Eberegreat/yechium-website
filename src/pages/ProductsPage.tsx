@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import ProductModal from '../components/ProductModal';
 import { Product } from '../types';
 import productsData from '../data/products.json';
 
+// Get all products and categories directly from the imported JSON
 const allProducts: Product[] = productsData;
 const allCategories = ['All', ...Array.from(new Set(allProducts.map(p => p.category)))];
 
